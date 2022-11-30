@@ -35,6 +35,8 @@ jobs:
         
     - name: build
       run: dotnet build --configuration Release --no-restore
+      # 위에서 checkout으로 colne해온 상태라 따로 경로 지정 안 해줘도 괜찮음
+      # 왜 exe말고 dll이 만들어지는지..
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.1
